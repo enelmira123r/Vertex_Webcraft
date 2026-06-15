@@ -1,0 +1,8 @@
+# OS junk
+Thumbs.db
+.DS_Store
+# temp screenshots
+_*.png
+
+# Local skill files (not part of the website)
+.claude/

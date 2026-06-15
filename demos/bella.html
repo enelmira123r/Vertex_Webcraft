@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Restorant Bella — Kuzhinë italiane në Tiranë</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--green:#16302a;--cream:#F5EFE4;--gold:#C9A24B;--ink:#1c1c1a}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;line-height:1.1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+  /* nav */
+  nav{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:28px 32px}
+  nav .logo{font-family:'Playfair Display',serif;font-size:1.7rem;color:#fff;font-weight:700;letter-spacing:.5px}
+  nav .links{display:flex;gap:32px;align-items:center}
+  nav .links a{color:#fff;font-size:.95rem;opacity:.9}
+  nav .book{border:1px solid rgba(255,255,255,.6);padding:9px 20px;border-radius:2px;color:#fff}
+  /* hero */
+  .hero{min-height:100vh;display:flex;align-items:center;position:relative;color:#fff;
+    background:linear-gradient(rgba(15,30,25,.55),rgba(15,30,25,.65)),url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=80') center/cover}
+  .hero__in{max-width:1200px;margin:0 auto;padding:0 32px;width:100%}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+  .hero h1{font-size:clamp(2.8rem,7vw,5.5rem);max-width:14ch;margin-bottom:24px}
+  .hero p{font-size:1.2rem;max-width:48ch;opacity:.92;margin-bottom:34px}
+  .btns{display:flex;gap:16px;flex-wrap:wrap}
+  .btn{padding:15px 32px;border-radius:2px;font-weight:500;font-size:1rem}
+  .btn--gold{background:var(--gold);color:#16302a}
+  .btn--out{border:1px solid rgba(255,255,255,.7);color:#fff}
+  /* dishes */
+  .sec{padding:110px 0}
+  .sec-h{text-align:center;margin-bottom:60px}
+  .sec-h .eyebrow{font-size:.8rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  .sec-h h2{font-size:clamp(2rem,4vw,3rem);color:var(--green)}
+  .dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .dish{background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 20px 50px rgba(22,48,42,.10)}
+  .dish img{width:100%;height:240px;object-fit:cover;display:block}
+  .dish .b{padding:26px}
+  .dish h3{font-size:1.4rem;color:var(--green);margin-bottom:8px}
+  .dish .price{color:var(--gold);font-family:'Playfair Display',serif;font-size:1.2rem;margin-top:14px}
+  /* about strip */
+  .about{background:var(--green);color:var(--cream);padding:110px 0}
+  .about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .about h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:20px}
+  .about p{opacity:.85;margin-bottom:16px}
+  .about img{width:100%;height:420px;object-fit:cover;border-radius:4px}
+  footer{background:#0f211c;color:#cdbf9f;text-align:center;padding:40px;font-size:.9rem}
+  @media(max-width:760px){nav .links{display:none}.dishes{grid-template-columns:1fr}.about .wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Bella</div>
+  <div class="links"><a href="#">Menu</a><a href="#">Rreth Nesh</a><a href="#">Kontakt</a><a href="#" class="book">Rezervo</a></div>
+</nav>
+<header class="hero">
+  <div class="hero__in">
+    <p class="eyebrow">Kuzhinë Italiane · Që nga 1998</p>
+    <h1>Shije autentike në zemër të Tiranës.</h1>
+    <p>Pasta e bërë me dorë, peshk i freskët dhe verëra të zgjedhura — në një atmosferë që të bën të ndihesh si në shtëpi.</p>
+    <div class="btns"><a class="btn btn--gold" href="#">Rezervo një tavolinë</a><a class="btn btn--out" href="#">Shiko menunë</a></div>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-h"><p class="eyebrow">Të preferuarat</p><h2>Pjatat tona të famshme</h2></div>
+    <div class="dishes">
+      <div class="dish"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt=""><div class="b"><h3>Tagliatelle al Tartufo</h3><p>Pasta e freskët me kërpudha tartufi dhe parmixhano.</p><div class="price">1 200 Lekë</div></div></div>
+      <div class="dish"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80" alt=""><div class="b"><h3>Pizza Margherita</h3><p>Domate San Marzano, mocarela bufale, borzilok i freskët.</p><div class="price">900 Lekë</div></div></div>
+      <div class="dish"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80" alt=""><div class="b"><h3>Menu Degustimi</h3><p>Pesë pjata të zgjedhura nga shefi ynë, me verë shoqëruese.</p><div class="price">3 500 Lekë</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div><h2>Traditë që ndihet në çdo kafshatë</h2><p>Prej më shumë se 25 vitesh, familja Bella sjell shijet e vërteta të Italisë në Tiranë. Përbërësit i zgjedhim çdo mëngjes, recetat i ruajmë siç na i lanë gjyshërit.</p><p>Të presim me krahët hapur — për një drekë të qetë ose një darkë të paharrueshme.</p><a class="btn btn--gold" href="#" style="display:inline-block;margin-top:14px">Rezervo tani</a></div>
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="">
+  </div>
+</section>
+<footer>© 2026 Restorant Bella · Rruga e Durrësit, Tiranë · +355 4 000 000</footer>
+</body>
+</html>

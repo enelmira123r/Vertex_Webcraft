@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  VERTEX WEBCRAFT — Studio Web · stil "Clay" · shumëgjuhësh
+  Emri: Vertex. Kontaktet: shënuar me TODO (ndrysho para postimit).
+  Gjuhët: te i18n.js (8 gjuhë; shtohen lehtë të tjera).
+  ============================================================
+-->
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vertex Webcraft — Studio web që ndërton përvoja dixhitale për markat në rritje</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="Vertex është një studio web në Shqipëri. Ndërtojmë website, dyqane online dhe identitet vizual për bizneset që duan të rriten." />
+  <meta property="og:title" content="Vertex Webcraft — Studio Web" />
+  <meta property="og:description" content="Ndërtojmë përvoja dixhitale për markat në rritje." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="Vertex Webcraft — kreu">
+        <svg class="brand__mark" viewBox="0 0 32 26" aria-hidden="true"><path d="M3 22 L16 5 L29 22" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter"/></svg>
+        <span class="brand__name">Vertex<small>Webcraft</small></span>
+      </a>
+      <nav class="nav__links" aria-label="Navigimi">
+        <a href="#work" data-i18n>Puna</a>
+        <a href="#services" data-i18n>Shërbimet</a>
+        <a href="#packages" data-i18n>Paketat</a>
+        <a href="#faq" data-i18n>FAQ</a>
+        <a href="#contact" class="nav__cta" data-i18n>Bisedo me ne</a>
+      </nav>
+      <div class="nav__right">
+        <button id="langBtn" class="lang-btn" aria-label="Ndrysho gjuhën / Change language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          <span id="langCurrent">SQ</span>
+        </button>
+        <button class="burger" id="burger" aria-label="Hap menunë" aria-expanded="false" aria-controls="overlayNav"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="overlay" id="overlayNav" aria-hidden="true">
+    <nav class="overlay__links" aria-label="Menu">
+      <a href="#work"><i>01</i> <span data-i18n>Puna</span></a>
+      <a href="#services"><i>02</i> <span data-i18n>Shërbimet</span></a>
+      <a href="#packages"><i>03</i> <span data-i18n>Paketat</span></a>
+      <a href="#faq"><i>04</i> <span data-i18n>FAQ</span></a>
+      <a href="#contact"><i>05</i> <span data-i18n>Kontakt</span></a>
+    </nav>
+    <div class="overlay__foot"><a href="mailto:kontakt@vertex.al">kontakt@vertex.al</a><span data-i18n>Tiranë, Shqipëri</span></div>
+  </div>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title reveal" data-i18n>Studio web që e bën biznesin tënd të duket profesional online.</h1>
+        <div class="hero__row">
+          <p class="hero__sub reveal" data-i18n>Ndërtojmë website, dyqane online dhe identitet vizual për bizneset shqiptare — me dizajn modern, çmime të qarta dhe mbështetje në shqip.</p>
+          <div class="hero__actions reveal">
+            <a href="#contact" class="btn" data-i18n>Merr ofertë falas</a>
+            <a href="#packages" class="btn btn--ghost" data-i18n>Shiko paketat</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MARQUEE ===================== -->
+    <section class="strip">
+      <div class="container"><p class="strip__label reveal" data-i18n>Çfarë ofrojmë</p></div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Website</span><span>Dyqane Online</span><span>Branding</span><span>SEO</span><span>Mirëmbajtje</span><span>Identitet Vizual</span>
+          <span>Website</span><span>Dyqane Online</span><span>Branding</span><span>SEO</span><span>Mirëmbajtje</span><span>Identitet Vizual</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WORK ===================== -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="head reveal">
+          <span class="label" data-i18n>(01) — Puna</span>
+          <h2 class="head__title" data-i18n>Projekte të përzgjedhura</h2>
+          <p class="head__note" data-i18n>Disa nga faqet që kemi ndërtuar. Kliko për t'i parë live.</p>
+        </div>
+        <div class="works">
+          <a href="https://www.stemory.online/" target="_blank" rel="noopener" class="work">
+            <figure class="work__media reveal-img"><img src="images/stemory.png" alt="Stemory — platformë edukimi" loading="lazy" /></figure>
+            <div class="work__meta reveal"><span class="work__idx">01</span><h3 class="work__name">Stemory</h3><span class="work__cat" data-i18n>Platformë Edukimi</span></div>
+          </a>
+          <a href="https://arvis-web.vercel.app/" target="_blank" rel="noopener" class="work">
+            <figure class="work__media reveal-img"><img src="images/arvis.png" alt="Arvis — dyqan online modë" loading="lazy" /></figure>
+            <div class="work__meta reveal"><span class="work__idx">02</span><h3 class="work__name">Arvis</h3><span class="work__cat" data-i18n>Dyqan Online · Modë</span></div>
+          </a>
+          <a href="https://website-per-kamera-dbhy.vercel.app/" target="_blank" rel="noopener" class="work">
+            <figure class="work__media reveal-img"><img src="images/kamera.png" alt="L&amp;T Kamera Sigurie — website" loading="lazy" /></figure>
+            <div class="work__meta reveal"><span class="work__idx">03</span><h3 class="work__name">L&amp;T Kamera Sigurie</h3><span class="work__cat" data-i18n>Dyqan &amp; Instalim</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="head reveal">
+          <span class="label" data-i18n>(02) — Shërbimet</span>
+          <h2 class="head__title" data-i18n>Çfarë bëjmë</h2>
+        </div>
+        <div class="srv">
+          <div class="srv__row reveal"><span class="srv__idx">01</span><h3 class="srv__title" data-i18n>Website Prezantuese</h3><p class="srv__desc" data-i18n>Faqe që tregon kush je, çfarë ofron dhe pse të të zgjedhin — e ndërtuar nga e para për biznesin tënd.</p></div>
+          <div class="srv__row reveal"><span class="srv__idx">02</span><h3 class="srv__title" data-i18n>Dyqan Online</h3><p class="srv__desc" data-i18n>Platforma tregtie që shesin: karrocë blerjeje, pagesa të sigurta dhe menaxhim i lehtë.</p></div>
+          <div class="srv__row reveal"><span class="srv__idx">03</span><h3 class="srv__title" data-i18n>Branding &amp; Identitet</h3><p class="srv__desc" data-i18n>Logo, ngjyra dhe tipografi që e bëjnë markën tënde të paharrueshme dhe konsistente.</p></div>
+          <div class="srv__row reveal"><span class="srv__idx">04</span><h3 class="srv__title" data-i18n>Zhvillim &amp; Performancë</h3><p class="srv__desc" data-i18n>Kod i pastër dhe i shpejtë, që ngarkohet menjëherë dhe del në Google.</p></div>
+          <div class="srv__row reveal"><span class="srv__idx">05</span><h3 class="srv__title" data-i18n>Mirëmbajtje &amp; Mbështetje</h3><p class="srv__desc" data-i18n>Përditësime, ndryshime dhe ndihmë e vazhdueshme edhe pas dorëzimit.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="head reveal">
+          <span class="label" data-i18n>(03) — Procesi</span>
+          <h2 class="head__title" data-i18n>Si punojmë</h2>
+        </div>
+        <div class="srv">
+          <div class="srv__row reveal"><span class="srv__idx">01</span><h3 class="srv__title" data-i18n>Bisedojmë</h3><p class="srv__desc" data-i18n>Më trego për biznesin dhe qëllimet e tua. Pa pagesë, pa detyrim — vetëm një bisedë.</p></div>
+          <div class="srv__row reveal"><span class="srv__idx">02</span><h3 class="srv__title" data-i18n>Dizajnojmë</h3><p class="srv__desc" data-i18n>Të përgatisim një pamje të faqes që ti e aprovon para se të nisim ndërtimin.</p></div>
+          <div class="srv__row reveal"><span class="srv__idx">03</span><h3 class="srv__title" data-i18n>Ndërtojmë</h3><p class="srv__desc" data-i18n>E kthejmë dizajnin në një faqe të vërtetë, të shpejtë dhe gati për klientët.</p></div>
+          <div class="srv__row reveal"><span class="srv__idx">04</span><h3 class="srv__title" data-i18n>Publikojmë</h3><p class="srv__desc" data-i18n>E nxjerrim faqen online, të mësojmë si ta përdorësh dhe mbetemi pranë për ty.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATEMENT ===================== -->
+    <section class="statement">
+      <div class="container">
+        <p class="statement__text reveal" data-i18n>Çdo biznez meriton një prani online që e bën krenar. Ne e bëjmë teknologjinë të thjeshtë për ty.</p>
+      </div>
+    </section>
+
+    <!-- ===================== PACKAGES ===================== -->
+    <section class="section" id="packages">
+      <div class="container">
+        <div class="head reveal">
+          <span class="label" data-i18n>(04) — Paketat</span>
+          <h2 class="head__title" data-i18n>Paketat tona</h2>
+          <p class="head__note" data-i18n>Zgjidh atë që të përshtatet — të japim një ofertë të qartë falas, pa detyrim.</p>
+        </div>
+        <div class="pkgs">
+          <article class="pkg reveal">
+            <span class="pkg__name" data-i18n>Fillestar</span>
+            <p class="pkg__for" data-i18n>Ideale për bizneset që duan një prani të parë online.</p>
+            <ul class="pkg__list">
+              <li data-i18n>Faqe një-faqëshe (one-page)</li>
+              <li data-i18n>Dizajn modern &amp; responsive</li>
+              <li data-i18n>Formë kontakti + WhatsApp</li>
+              <li data-i18n>Publikim online</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost btn--block" data-i18n>Merr ofertë</a>
+          </article>
+
+          <article class="pkg pkg--featured reveal">
+            <span class="pkg__name" data-i18n>Profesional</span>
+            <p class="pkg__for" data-i18n>Për bizneset që duan një website të plotë e serioz.</p>
+            <ul class="pkg__list">
+              <li data-i18n>Deri në 6 faqe</li>
+              <li data-i18n>SEO bazik (dil në Google)</li>
+              <li data-i18n>Blog / lajme</li>
+              <li data-i18n>Integrim me rrjetet sociale</li>
+              <li data-i18n>1 muaj mbështetje falas</li>
+            </ul>
+            <a href="#contact" class="btn btn--block" data-i18n>Merr ofertë</a>
+          </article>
+
+          <article class="pkg reveal">
+            <span class="pkg__name" data-i18n>Dyqan Online</span>
+            <p class="pkg__for" data-i18n>Për ata që duan të shesin produkte online.</p>
+            <ul class="pkg__list">
+              <li data-i18n>Produkte të palimituara</li>
+              <li data-i18n>Karrocë blerjeje &amp; pagesa</li>
+              <li data-i18n>Menaxhim i lehtë porosish</li>
+              <li data-i18n>Trajnim si ta përdorësh</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost btn--block" data-i18n>Merr ofertë</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section" id="faq">
+      <div class="container faq">
+        <div class="faq__head reveal">
+          <span class="label" data-i18n>(05) — Pyetje të shpeshta</span>
+          <h2 class="head__title" data-i18n>FAQ</h2>
+        </div>
+        <div class="faq__list">
+          <details class="faq__item reveal"><summary><span data-i18n>Sa kushton një website?</span><span class="faq__mark" aria-hidden="true"></span></summary><p data-i18n>Varet nga nevojat e tua — shiko paketat më lart. Të japim gjithmonë një ofertë të qartë falas, pa detyrim.</p></details>
+          <details class="faq__item reveal"><summary><span data-i18n>Sa kohë merr ndërtimi?</span><span class="faq__mark" aria-hidden="true"></span></summary><p data-i18n>Zakonisht 1–3 javë, varësisht nga madhësia e projektit. Të japim një afat të saktë në fillim dhe e respektojmë.</p></details>
+          <details class="faq__item reveal"><summary><span data-i18n>A duhet të di gjëra teknike?</span><span class="faq__mark" aria-hidden="true"></span></summary><p data-i18n>Aspak. Ne marrim përsipër gjithçka — nga dizajni te publikimi. Ti përqendrohu te biznesi yt.</p></details>
+          <details class="faq__item reveal"><summary><span data-i18n>A mund ta përditësoj vetë faqen më pas?</span><span class="faq__mark" aria-hidden="true"></span></summary><p data-i18n>Po. Të mësojmë si ta menaxhosh, ose e mirëmbajmë ne për ty me një tarifë mujore të vogël.</p></details>
+          <details class="faq__item reveal"><summary><span data-i18n>Punoni vetëm me biznese në Tiranë?</span><span class="faq__mark" aria-hidden="true"></span></summary><p data-i18n>Jo. Punojmë me klientë në të gjithë Shqipërinë dhe jashtë saj — gjithçka mund të bëhet online.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA / CONTACT ===================== -->
+    <section class="cta" id="contact">
+      <div class="container">
+        <span class="label reveal" data-i18n>(06) — Le të fillojmë</span>
+        <h2 class="cta__title reveal" data-i18n>Le të bisedojmë.</h2>
+        <div class="cta__grid">
+          <div class="cta__left reveal">
+            <a href="mailto:kontakt@vertex.al" class="cta__email" data-magnetic>kontakt@vertex.al</a>
+            <ul class="cta__details">
+              <!-- TODO: të dhënat reale -->
+              <li><span data-i18n>Telefon</span><a href="tel:+355600000000">+355 60 000 0000</a></li>
+              <li><span>WhatsApp</span><a href="https://wa.me/355600000000" target="_blank" rel="noopener" data-i18n>Na shkruaj →</a></li>
+              <li><span>Instagram</span><a href="#">@vertex.studio</a></li>
+              <li><span data-i18n>Vendndodhja</span><span data-i18n>Tiranë, Shqipëri</span></li>
+            </ul>
+          </div>
+          <form class="form reveal" id="contactForm" novalidate>
+            <div class="field"><input type="text" id="name" name="name" placeholder=" " required /><label for="name" data-i18n>Emri</label></div>
+            <div class="field"><input type="email" id="email" name="email" placeholder=" " required /><label for="email">Email</label></div>
+            <div class="field"><input type="text" id="business" name="business" placeholder=" " /><label for="business" data-i18n>Biznesi (opsionale)</label></div>
+            <div class="field"><textarea id="message" name="message" rows="3" placeholder=" " required></textarea><label for="message" data-i18n>Trego për projektin tënd</label></div>
+            <button type="submit" class="btn btn--block" data-i18n>Dërgo kërkesën</button>
+            <p class="form__note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#top" class="brand" aria-label="Vertex Webcraft">
+            <svg class="brand__mark" viewBox="0 0 32 26" aria-hidden="true"><path d="M3 22 L16 5 L29 22" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter"/></svg>
+            <span class="brand__name">Vertex<small>Webcraft</small></span>
+          </a>
+          <p data-i18n>Studio web e pavarur që ndërton prani online për bizneset shqiptare.</p>
+        </div>
+        <div class="footer__col">
+          <span class="footer__h" data-i18n>Menu</span>
+          <a href="#work" data-i18n>Puna</a><a href="#services" data-i18n>Shërbimet</a><a href="#packages" data-i18n>Paketat</a><a href="#faq" data-i18n>FAQ</a>
+        </div>
+        <div class="footer__col">
+          <span class="footer__h" data-i18n>Kontakt</span>
+          <a href="mailto:kontakt@vertex.al">kontakt@vertex.al</a><a href="tel:+355600000000">+355 60 000 0000</a><span data-i18n>Tiranë, Shqipëri</span>
+        </div>
+        <div class="footer__col">
+          <span class="footer__h" data-i18n>Social</span>
+          <a href="#">Instagram</a><a href="#">Facebook</a><a href="https://wa.me/355600000000">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> Vertex — Studio Web.</p>
+        <p data-i18n>Tiranë, Shqipëri</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== PANELI I GJUHËS ===================== -->
+  <div class="lang-modal" id="langModal" aria-hidden="true" role="dialog" aria-label="Zgjedhja e gjuhës">
+    <div class="lang-box">
+      <button class="lang-close" id="langClose" aria-label="Mbyll">✕</button>
+      <p class="lang-eyebrow">🌐 Zgjidh gjuhën · Choose your language</p>
+      <div class="lang-grid" id="langGrid"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
