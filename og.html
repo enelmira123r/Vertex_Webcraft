@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800;900&family=Space+Mono:wght@400&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+  body {
+    background: #F6F5F1; color: #0D0D0B; font-family: 'Archivo', sans-serif;
+    padding: 70px 80px; display: flex; flex-direction: column; justify-content: space-between;
+    position: relative; overflow: hidden;
+  }
+  .top { display: flex; align-items: center; gap: 16px; }
+  .mark { width: 54px; height: 44px; }
+  .brand { display: flex; flex-direction: column; line-height: .9; }
+  .brand b { font-weight: 900; font-size: 2.1rem; letter-spacing: -.04em; }
+  .brand small { font-family: 'Space Mono', monospace; font-size: .8rem; letter-spacing: .22em; color: #86837A; margin-top: 6px; }
+  h1 { font-weight: 900; font-size: 5.2rem; line-height: .98; letter-spacing: -.045em; max-width: 18ch; }
+  h1 .c { color: #F0543C; }
+  .foot { display: flex; align-items: center; justify-content: space-between; font-family: 'Space Mono', monospace; font-size: 1.05rem; color: #3F3E39; }
+  .foot .dot { color: #F0543C; }
+  .blob { position: absolute; right: -120px; bottom: -120px; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, rgba(240,84,60,.16), rgba(240,84,60,0) 70%); }
+</style>
+</head>
+<body>
+  <div class="blob"></div>
+  <div class="top">
+    <svg class="mark" viewBox="0 0 32 26" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 23 L16 4" stroke="#0D0D0B"/><path d="M16 4 L28 23" stroke="#F0543C"/>
+    </svg>
+    <span class="brand"><b>Vertex</b><small>WEBCRAFT</small></span>
+  </div>
+  <h1>Website që e bëjnë biznesin tënd <span class="c">profesional</span> online.</h1>
+  <div class="foot">
+    <span>Website · Dyqane Online · Branding</span>
+    <span><span class="dot">●</span>&nbsp; Tiranë, Shqipëri</span>
+  </div>
+</body>
+</html>

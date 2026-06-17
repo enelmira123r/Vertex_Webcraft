@@ -83,12 +83,23 @@
     reveals.forEach(function (el) { io.observe(el); });
   }
 
-  /* Forma e kontaktit (pa server: hap email-in) */
-  /* TODO: ndrysho me email-in tënd real */
-  var EMAIL = 'kontakt@vertex.al';
+  /* Forma e kontaktit */
+  var EMAIL = 'createyourwebsite44@gmail.com';
+  /* TODO: merr një çelës falas te https://web3forms.com (fut email-in createyourwebsite44@gmail.com)
+     dhe vendose këtu. Pa çelës, forma hap programin e email-it (mailto) si më parë. */
+  var WEB3FORMS_KEY = '';
   var form = document.getElementById('contactForm');
   var note = document.getElementById('formNote');
   function setNote(t, type) { if (note) { note.textContent = t; note.className = 'form__note ' + (type || ''); } }
+
+  function sendViaMailto(name, email, business, message) {
+    var subject = 'Kërkesë e re nga website-i — ' + name;
+    var body = 'Emri: ' + name + '\nEmail: ' + email + '\nBiznesi: ' + (business || '—') + '\n\nMesazhi:\n' + message;
+    window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    setNote('Po hapet email-i për dërgim. Faleminderit!', 'ok');
+    form.reset();
+  }
+
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -96,11 +107,37 @@
       var business = form.business.value.trim(), message = form.message.value.trim();
       if (!name || !email || !message) { setNote('Plotëso emrin, email-in dhe mesazhin.', 'err'); return; }
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setNote('Email-i nuk duket i saktë.', 'err'); return; }
-      var subject = 'Kërkesë e re nga website-i — ' + name;
-      var body = 'Emri: ' + name + '\nEmail: ' + email + '\nBiznesi: ' + (business || '—') + '\n\nMesazhi:\n' + message;
-      window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      setNote('Po hapet email-i për dërgim. Faleminderit!', 'ok');
-      form.reset();
+
+      /* Pa çelës Web3Forms → kthehu te mailto */
+      if (!WEB3FORMS_KEY) { sendViaMailto(name, email, business, message); return; }
+
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = true;
+      setNote('Po dërgohet…', '');
+
+      var data = new FormData(form);
+      data.append('access_key', WEB3FORMS_KEY);
+      data.append('subject', 'Kërkesë e re nga website-i — ' + name);
+      data.append('from_name', 'Vertex Webcraft');
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (res && res.success) {
+            setNote('Faleminderit! Mesazhi u dërgua — të kthehemi shpejt.', 'ok');
+            form.reset();
+          } else {
+            setNote('Diçka shkoi keq. Provo përsëri ose na shkruaj në WhatsApp.', 'err');
+          }
+        })
+        .catch(function () {
+          setNote('Problem me lidhjen. Provo përsëri ose na shkruaj në WhatsApp.', 'err');
+        })
+        .finally(function () { if (btn) btn.disabled = false; });
     });
   }
 })();
