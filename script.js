@@ -84,8 +84,8 @@
   }
 
   /* Forma e kontaktit */
-  var EMAIL = 'createyourwebsite44@gmail.com';
-  /* TODO: merr një çelës falas te https://web3forms.com (fut email-in createyourwebsite44@gmail.com)
+  var EMAIL = 'vertexwebcraft4@gmail.com';
+  /* TODO: merr një çelës falas te https://web3forms.com (fut email-in vertexwebcraft4@gmail.com)
      dhe vendose këtu. Pa çelës, forma hap programin e email-it (mailto) si më parë. */
   var WEB3FORMS_KEY = '';
   var form = document.getElementById('contactForm');
